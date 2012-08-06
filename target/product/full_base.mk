@@ -24,13 +24,17 @@ PRODUCT_PACKAGES := \
     libdrmframework \
     libdrmframework_jni \
     libfwdlockengine \
+    VideoEditor \
+    WAPPushManager
+
+ifneq ($(TARGET_PRODUCT),full_grouper)
+PRODUCT_PACKAGES += \
     OpenWnn \
     PinyinIME \
     libWnnEngDic \
     libWnnJpnDic \
-    libwnndict \
-    VideoEditor \
-    WAPPushManager
+    libwnndict
+endif
 
 PRODUCT_PACKAGES += \
     Galaxy4 \

@@ -106,6 +106,11 @@ build_desc := yakju-user 4.1.1 JRO03C 398337 release-keys
 PRIVATE_BUILD_DESC := yakju-user 4.1.1 JRO03C 398337 release-keys
 BUILD_FINGERPRINT := google/yakju/maguro:4.1.1/JRO03C/398337:user/release-keys
 else
+ifeq ($(TARGET_PRODUCT),full_grouper)
+build_desc := nakasi-user 4.1.1 JRO03D 402395 release-keys
+PRIVATE_BUILD_DESC := nakasi-user 4.1.1 JRO03D 402395 release-keys
+BUILD_FINGERPRINT := google/nakasi/grouper:4.1.1/JRO03D/402395:user/release-keys
+else
 # A human-readable string that descibes this build in detail.
 build_desc := $(TARGET_PRODUCT)-$(TARGET_BUILD_VARIANT) $(PLATFORM_VERSION) $(BUILD_ID) $(BUILD_NUMBER) $(BUILD_VERSION_TAGS)
 $(INSTALLED_BUILD_PROP_TARGET): PRIVATE_BUILD_DESC := $(build_desc)
@@ -116,6 +121,7 @@ ifeq (,$(strip $(BUILD_FINGERPRINT)))
 endif
 ifneq ($(words $(BUILD_FINGERPRINT)),1)
   $(error BUILD_FINGERPRINT cannot contain spaces: "$(BUILD_FINGERPRINT)")
+endif
 endif
 endif
 endif

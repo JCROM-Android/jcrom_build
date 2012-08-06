@@ -25,7 +25,6 @@ PRODUCT_PROPERTY_OVERRIDES := \
 PRODUCT_PACKAGES := \
     ApplicationsProvider \
     BackupRestoreConfirmation \
-    Browser \
     Contacts \
     ContactsProvider \
     DefaultContainerService \
@@ -120,6 +119,12 @@ PRODUCT_PACKAGES := \
     sensorservice \
     lint \
     uiautomator
+
+ifneq ($(TARGET_PRODUCT),full_grouper)
+PRODUCT_PACKAGES += \
+    Browser
+endif
+
 
 PRODUCT_COPY_FILES += \
     system/core/rootdir/init.usb.rc:root/init.usb.rc \
