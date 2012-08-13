@@ -43,6 +43,7 @@ PRODUCT_PACKAGES := \
 
 ifneq ($(TARGET_PRODUCT),full_negitoro)
 ifneq ($(TARGET_PRODUCT),full_grouper)
+PRODUCT_PACKAGES += \
     Calendar
 endif
 endif
