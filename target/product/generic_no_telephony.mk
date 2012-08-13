@@ -23,7 +23,6 @@ PRODUCT_PACKAGES := \
     DeskClock \
     Bluetooth \
     Calculator \
-    Calendar \
     CertInstaller \
     DrmProvider \
     Email \
@@ -41,6 +40,12 @@ PRODUCT_PACKAGES := \
     bluetooth-health \
     hostapd \
     wpa_supplicant.conf
+
+ifneq ($(TARGET_PRODUCT),full_negitoro)
+ifneq ($(TARGET_PRODUCT),full_grouper)
+    Calendar
+endif
+endif
 
 PRODUCT_PACKAGES += \
     icu.dat
