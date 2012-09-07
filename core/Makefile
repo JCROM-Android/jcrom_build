@@ -111,6 +111,16 @@ build_desc := nakasi-user 4.1.1 JRO03D 402395 release-keys
 PRIVATE_BUILD_DESC := nakasi-user 4.1.1 JRO03D 402395 release-keys
 BUILD_FINGERPRINT := google/nakasi/grouper:4.1.1/JRO03D/402395:user/release-keys
 else
+ifeq ($(TARGET_PRODUCT),full_grouperota)
+build_desc := nakasi-user 4.1.1 JRO03D 402395 release-keys
+PRIVATE_BUILD_DESC := nakasi-user 4.1.1 JRO03D 402395 release-keys
+BUILD_FINGERPRINT := google/nakasi/grouper:4.1.1/JRO03D/402395:user/release-keys
+else
+ifeq ($(TARGET_PRODUCT),full_crespo)
+build_desc := soju-user 4.1.1 JRO03E 403059 release-keys
+PRIVATE_BUILD_DESC := soju-user 4.1.1 JRO03E 403059 release-keys
+BUILD_FINGERPRINT := google/soju/crespo:4.1.1/JRO03E/403059:user/release-keys
+else
 ifeq ($(TARGET_PRODUCT),full_fullcrespo)
 build_desc := soju-user 4.1.1 JRO03E 403059 release-keys
 PRIVATE_BUILD_DESC := soju-user 4.1.1 JRO03E 403059 release-keys
@@ -126,6 +136,8 @@ ifeq (,$(strip $(BUILD_FINGERPRINT)))
 endif
 ifneq ($(words $(BUILD_FINGERPRINT)),1)
   $(error BUILD_FINGERPRINT cannot contain spaces: "$(BUILD_FINGERPRINT)")
+endif
+endif
 endif
 endif
 endif
