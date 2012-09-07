@@ -33,7 +33,6 @@ PRODUCT_PACKAGES := \
     Launcher2 \
     MusicFX \
     Phone \
-    QuickSearchBox \
     Settings \
     SystemUI \
     CalendarProvider \
@@ -41,10 +40,14 @@ PRODUCT_PACKAGES := \
     hostapd \
     wpa_supplicant.conf
 
+ifneq ($(TARGET_PRODUCT),full_fullcrespo)
+PRODUCT_PACKAGES += \
+    QuickSearchBox
 ifneq ($(TARGET_PRODUCT),full_negitoro)
 ifneq ($(TARGET_PRODUCT),full_grouper)
 PRODUCT_PACKAGES += \
     Calendar
+endif
 endif
 endif
 
