@@ -126,6 +126,11 @@ build_desc := soju-user 4.1.1 JRO03E 403059 release-keys
 PRIVATE_BUILD_DESC := soju-user 4.1.1 JRO03E 403059 release-keys
 BUILD_FINGERPRINT := google/soju/crespo:4.1.1/JRO03E/403059:user/release-keys
 else
+ifeq ($(TARGET_PRODUCT),full_wingray)
+build_desc := tervigon-user 4.1.1 JRO03H 405518 release-keys
+PRIVATE_BUILD_DESC := tervigon-user 4.1.1 JRO03H 405518 release-keys
+BUILD_FINGERPRINT := motorola/tervigon/wingray:4.1.1/JRO03H/405518:user/release-keys
+else
 # A human-readable string that descibes this build in detail.
 build_desc := $(TARGET_PRODUCT)-$(TARGET_BUILD_VARIANT) $(PLATFORM_VERSION) $(BUILD_ID) $(BUILD_NUMBER) $(BUILD_VERSION_TAGS)
 $(INSTALLED_BUILD_PROP_TARGET): PRIVATE_BUILD_DESC := $(build_desc)
@@ -136,6 +141,7 @@ ifeq (,$(strip $(BUILD_FINGERPRINT)))
 endif
 ifneq ($(words $(BUILD_FINGERPRINT)),1)
   $(error BUILD_FINGERPRINT cannot contain spaces: "$(BUILD_FINGERPRINT)")
+endif
 endif
 endif
 endif
