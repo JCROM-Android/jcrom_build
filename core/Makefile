@@ -96,34 +96,34 @@ endif
 BUILD_VERSION_TAGS := $(subst $(space),$(comma),$(sort $(BUILD_VERSION_TAGS)))
 
 ifeq ($(TARGET_PRODUCT),full_maguro)
-build_desc := yakju-user 4.1.1 JRO03C 398337 release-keys
-PRIVATE_BUILD_DESC := yakju-user 4.1.1 JRO03C 398337 release-keys
-BUILD_FINGERPRINT := google/yakju/maguro:4.1.1/JRO03C/398337:user/release-keys
+build_desc := yakju-user 4.1.2 JZO54K 485486 release-keys
+PRIVATE_BUILD_DESC := yakju-user 4.1.2 JZO54K 485486 release-keys
+BUILD_FINGERPRINT := google/yakju/maguro:4.1.2/JZO54K/485486:user/release-keys
 else
 ifeq ($(TARGET_PRODUCT),full_negitoro)
-build_desc := yakju-user 4.1.1 JRO03C 398337 release-keys
-PRIVATE_BUILD_DESC := yakju-user 4.1.1 JRO03C 398337 release-keys
-BUILD_FINGERPRINT := google/yakju/maguro:4.1.1/JRO03C/398337:user/release-keys
+build_desc := yakju-user 4.1.2 JZO54K 485486 release-keys
+PRIVATE_BUILD_DESC := yakju-user 4.1.2 JZO54K 485486 release-keys
+BUILD_FINGERPRINT := google/yakju/maguro:4.1.2/JZO54K/485486:user/release-keys
 else
 ifeq ($(TARGET_PRODUCT),full_grouper)
-build_desc := nakasi-user 4.1.1 JRO03D 402395 release-keys
-PRIVATE_BUILD_DESC := nakasi-user 4.1.1 JRO03D 402395 release-keys
-BUILD_FINGERPRINT := google/nakasi/grouper:4.1.1/JRO03D/402395:user/release-keys
+build_desc := nakasi-user 4.1.2 JZO54K 485486 release-keys
+PRIVATE_BUILD_DESC := nakasi-user 4.1.2 JZO54K 485486 release-keys
+BUILD_FINGERPRINT := google/nakasi/grouper:4.1.2/JZO54K/485486:user/release-keys
 else
 ifeq ($(TARGET_PRODUCT),full_grouperota)
-build_desc := nakasi-user 4.1.1 JRO03D 402395 release-keys
-PRIVATE_BUILD_DESC := nakasi-user 4.1.1 JRO03D 402395 release-keys
-BUILD_FINGERPRINT := google/nakasi/grouper:4.1.1/JRO03D/402395:user/release-keys
+build_desc := nakasi-user 4.1.2 JZO54K 485486 release-keys
+PRIVATE_BUILD_DESC := nakasi-user 4.1.2 JZO54K 485486 release-keys
+BUILD_FINGERPRINT := google/nakasi/grouper:4.1.2/JZO54K/485486:user/release-keys
 else
 ifeq ($(TARGET_PRODUCT),full_crespo)
-build_desc := soju-user 4.1.1 JRO03E 403059 release-keys
-PRIVATE_BUILD_DESC := soju-user 4.1.1 JRO03E 403059 release-keys
-BUILD_FINGERPRINT := google/soju/crespo:4.1.1/JRO03E/403059:user/release-keys
+build_desc := soju-user 4.1.2 JZO54K 485486 release-keys
+PRIVATE_BUILD_DESC := soju-user 4.1.2 JZO54K 485486 release-keys
+BUILD_FINGERPRINT := google/soju/crespo:4.1.2/JZO54K/485486:user/release-keys
 else
 ifeq ($(TARGET_PRODUCT),full_fullcrespo)
-build_desc := soju-user 4.1.1 JRO03E 403059 release-keys
-PRIVATE_BUILD_DESC := soju-user 4.1.1 JRO03E 403059 release-keys
-BUILD_FINGERPRINT := google/soju/crespo:4.1.1/JRO03E/403059:user/release-keys
+build_desc := soju-user 4.1.2 JZO54K 485486 release-keys
+PRIVATE_BUILD_DESC := soju-user 4.1.2 JZO54K 485486 release-keys
+BUILD_FINGERPRINT := google/soju/crespo:4.1.2/JZO54K/485486:user/release-keys
 else
 ifeq ($(TARGET_PRODUCT),full_wingray)
 build_desc := tervigon-user 4.1.1 JRO03H 405518 release-keys
