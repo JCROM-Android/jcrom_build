@@ -1345,6 +1345,8 @@ $(INTERNAL_OTA_PACKAGE_TARGET): $(BUILT_TARGET_FILES_PACKAGE) $(DISTTOOLS)
 
 .PHONY: otapackage
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
+jcrom: otapackage
+	$(hide) $(MD5SUM) $(PRODUCT_OUT)/$(jc_name).zip > $(PRODUCT_OUT)/$(jc_name).zip.md5sum
 
 # -----------------------------------------------------------------
 # The update package
