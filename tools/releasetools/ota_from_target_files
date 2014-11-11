@@ -551,6 +551,16 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   if HasVendorPartition(input_zip):
     system_progress -= 0.1
 
+  script.Print("                                             ");
+  script.Print("    #####   ### #  #####      ###    #     # ");
+  script.Print("       #   #   ##   #   #    #   #   ##   ## ");
+  script.Print("       #  #         #    #  #     #  # # # # ");
+  script.Print("       #  #         ####    #     #  #  #  # ");
+  script.Print(" #     #  #         #   #   #     #  #     # ");
+  script.Print("  #   #    #    #   #    #   #   #   #     # ");
+  script.Print("   ###      ####   ###   ##   ###    ##   ## ");
+  script.Print("                                             ");
+
   if "selinux_fc" in OPTIONS.info_dict:
     WritePolicyConfig(OPTIONS.info_dict["selinux_fc"], output_zip)
 
