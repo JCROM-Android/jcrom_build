@@ -962,8 +962,19 @@ fi
 $(hide) ln -sf /vendor $(TARGET_OUT)/vendor
 endef
 else
+ifdef TARGET_DUMMY_VENDORIMAGE
+define create-system-vendor-symlink
+$(hide) if [ -d $(TARGET_OUT)/vendor ] && [ ! -h $(TARGET_OUT)/vendor ]; then \
+  echo 'Non-symlink $(TARGET_OUT)/vendor detected!' 1>&2; \
+  echo 'You cannot install files to $(TARGET_OUT)/vendor while building a separate vendor.img!' 1>&2; \
+  exit 1; \
+fi
+$(hide) ln -sf /vendor $(TARGET_OUT)/vendor
+endef
+else
 define create-system-vendor-symlink
 endef
+endif
 endif
 
 # $(1): output file
